@@ -1,10 +1,8 @@
 const server = require("./server");
-const morgan = require("morgan");
 const router = require("./routes/balance.routes");
+require('./database');
 
 const port = server.get('port');
-
-server.use(morgan("dev"));
 
 server.use(router);
 
